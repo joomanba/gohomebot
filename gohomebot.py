@@ -3,7 +3,7 @@ import urllib.parse
 import json
 import ssl
 
-def lambda_handler():
+def send_messege_to_slack():
     params = urllib.parse.urlencode({'payload' : json.dumps({"text": "It's time to go home! Thanks for your hard work!"})})
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
     context = ssl._create_unverified_context()
@@ -19,4 +19,4 @@ def lambda_handler():
     print(response.status, response.reason, response.msg)
     conn.close()
 
-lambda_handler()
+send_messege_to_slack()
