@@ -1,7 +1,7 @@
 import http.client
 import urllib.parse
 import json
-import ssl
+import ssl 
 
 def send_messege_to_slack():
     params = urllib.parse.urlencode({'payload' : json.dumps({"text": "It's time to go home! Thanks for your hard work!"})})
